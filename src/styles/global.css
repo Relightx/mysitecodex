@@ -117,14 +117,14 @@ main {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(56vh, 72vh, 80vh);
+  min-height: clamp(62vh, 78vh, 88vh);
   display: grid;
   align-content: center;
   justify-items: center;
   text-align: center;
-  gap: 1rem;
+  gap: 1.35rem;
   border-bottom: 1px solid var(--border);
-  padding: clamp(2.8rem, 8vw, 5.2rem) 0;
+  padding: clamp(4.6rem, 12vw, 8.6rem) 0;
 }
 
 .hero::before {
@@ -137,8 +137,8 @@ main {
   height: 100%;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.22) 45%, rgba(0, 0, 0, 0.68) 100%),
-    radial-gradient(900px 400px at 50% 10%, rgba(45, 88, 84, 0.15) 0%, rgba(7, 11, 12, 0) 68%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.14) 46%, rgba(0, 0, 0, 0.58) 100%),
+    radial-gradient(1020px 520px at 50% 8%, rgba(49, 102, 98, 0.2) 0%, rgba(7, 11, 12, 0.04) 62%);
 }
 
 h1,
@@ -157,23 +157,25 @@ h2,
 
 h1 {
   font-family: 'Cormorant Garamond', 'Times New Roman', serif;
-  font-size: clamp(5.2rem, 26vw, 14rem);
-  font-weight: 700;
-  line-height: 0.82;
-  letter-spacing: 0.06em;
+  font-size: clamp(3.8rem, 16vw, 8.2rem);
+  font-weight: 600;
+  line-height: 0.88;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .hero-title {
   text-transform: uppercase;
-  letter-spacing: 0.09em;
-  font-size: clamp(1.2rem, 6vw, 2.2rem);
+  letter-spacing: 0.08em;
+  font-size: clamp(1rem, 4.4vw, 1.6rem);
+  color: #d9e3e2;
 }
 
 .hero-sub {
   color: var(--muted);
-  font-size: 0.79rem;
-  letter-spacing: 0.24em;
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
