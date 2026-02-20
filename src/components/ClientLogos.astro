@@ -1,20 +1,16 @@
 ---
 const logos = [
-  { name: 'CLIENT 01', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+01' },
-  { name: 'CLIENT 02', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+02' },
-  { name: 'CLIENT 03', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+03' },
-  { name: 'CLIENT 04', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+04' },
-  { name: 'CLIENT 05', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+05' },
-  { name: 'CLIENT 06', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+06' },
+  { name: 'CLIENT 01' },
+  { name: 'CLIENT 02' },
+  { name: 'CLIENT 03' },
+  { name: 'CLIENT 04' },
+  { name: 'CLIENT 05' },
+  { name: 'CLIENT 06' },
 ];
 ---
 
 <section class="clientLogos" aria-label="Client logos">
-  {logos.map((logo) =>
-    logo.src ? (
-      <img src={logo.src} alt={logo.name} loading="lazy" />
-    ) : (
-      <span>{logo.name}</span>
-    ),
-  )}
+  {logos.map((logo) => (
+    <span>{logo.name}</span>
+  ))}
 </section>
