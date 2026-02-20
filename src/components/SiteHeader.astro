@@ -1,0 +1,18 @@
+---
+const navItems = [
+  { href: '#home', label: 'Home' },
+  { href: '#work', label: 'Work' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="site-header">
+  <a href="#home" class="brand">Yuta Suzumo</a>
+  <nav aria-label="Main navigation">
+    <ul class="nav-list">
+      {navItems.map((item) => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>

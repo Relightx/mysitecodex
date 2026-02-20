@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
 
 interface Props {
   title: string;
@@ -8,19 +9,11 @@ interface Props {
 
 const {
   title,
-  description = 'A clean and modern Astro static website.',
+  description = 'Portfolio landing page for Yuta Suzumo.',
 } = Astro.props;
-
-const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-];
-
-const currentPath = Astro.url.pathname;
 ---
 
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -32,27 +25,13 @@ const currentPath = Astro.url.pathname;
   </head>
   <body>
     <div class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="/">Orbit Studio</a>
-        <nav aria-label="Main navigation">
-          <ul class="nav-list">
-            {nav.map((item) => (
-              <li>
-                <a class={currentPath === item.href ? 'active' : ''} href={item.href} aria-current={currentPath === item.href ? 'page' : undefined}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
-
+      <SiteHeader />
       <main>
         <slot />
       </main>
-
       <footer class="site-footer">
-        <p>© {new Date().getFullYear()} Orbit Studio</p>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube</a>
       </footer>
     </div>
   </body>

@@ -1,26 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import WorkList from '../components/WorkList.astro';
 ---
 
-<BaseLayout title="Home | Orbit Studio" description="Home page for Orbit Studio.">
-  <section class="panel hero">
-    <p class="highlight">Mobile-first Astro site</p>
-    <h1>シンプルで、ちゃんとかっこいい。</h1>
-    <p>
-      必要な情報だけを、スムーズに届けるための静的サイト。
-      Astroで高速に配信し、読みやすさと余白を大切に設計しました。
-    </p>
-    <a class="cta" href="/about">View About</a>
+<BaseLayout title="Yuta Suzumo | Filmmaker / FPV Drone Pilot" description="Portfolio landing page for Yuta Suzumo.">
+  <section id="home" class="section hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">Yuta Suzumo</h1>
+    <p class="hero-title">Filmmaker / FPV Drone Pilot</p>
+    <p class="hero-sub">AVAILABLE WORLDWIDE</p>
+    <a class="button" href="#work">View Work</a>
   </section>
 
-  <section class="grid-two">
-    <article class="card">
-      <h3>Fast</h3>
-      <p>静的出力で、初回表示もページ遷移も軽快です。</p>
-    </article>
-    <article class="card">
-      <h3>Focused</h3>
-      <p>情報設計を絞り込み、スマホでも迷わないUIにしています。</p>
-    </article>
+  <ClientLogos />
+
+  <WorkList />
+
+  <section id="contact" class="section contact" aria-labelledby="contact-title">
+    <div class="section-head">
+      <p class="kicker">Get in touch</p>
+      <h2 id="contact-title">CONTACT</h2>
+    </div>
+    <p class="contact-email">yutasuzumo@gmail.com</p>
+    <p class="contact-note">External link: <a href="https://en.ac.jp/mypage_login" target="_blank" rel="noreferrer">en.ac.jp/mypage_login</a></p>
   </section>
 </BaseLayout>
