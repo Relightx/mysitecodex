@@ -255,72 +255,26 @@ h1 {
 }
 
 .clientLogos {
-  margin: 24px 0 28px !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 44px !important;
-  flex-wrap: wrap !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  margin: 22px 0 30px;
+  flex-wrap: wrap;
 }
 
-.clients,
-.clientSection {
-  margin: 24px 0 28px !important;
-  padding: 0 !important;
+.clientLogos img {
+  height: 22px;
+  width: auto;
+  opacity: 0.65;
+  filter: grayscale(1) brightness(1.6);
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
 }
 
-.clientLogos a,
-.clientLogos button,
-.clientLogos li,
-.clients a,
-.clients button,
-.clients li,
-.clientSection a,
-.clientSection button,
-.clientSection li {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  min-height: 0 !important;
-  height: auto !important;
-}
-
-.clientLogos a,
-.clients a,
-.clientSection a {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.clients,
-.clientSection {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 44px !important;
-  flex-wrap: wrap !important;
-}
-
-.clientLogos span,
-.clients span,
-.clientSection span,
-.clientLogos a,
-.clients a,
-.clientSection a {
-  font-size: 11px !important;
-  letter-spacing: 0.26em !important;
-  text-transform: uppercase !important;
-  opacity: 0.6 !important;
-}
-
-.clientLogos a:hover,
-.clients a:hover,
-.clientSection a:hover {
-  opacity: 1 !important;
+.clientLogos img:hover {
+  opacity: 1;
+  filter: grayscale(0) brightness(1);
+  transform: translateY(-1px);
 }
 
 .section-head {
@@ -503,8 +457,8 @@ h2 {
   }
 
   .clientLogos {
-    gap: 44px !important;
-    margin: 24px 0 28px !important;
+    gap: 56px;
+    margin: 22px 0 30px;
   }
 
   .work-list {
@@ -522,6 +476,14 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  .clientLogos {
+    gap: 22px;
+  }
+
+  .clientLogos img {
+    height: 18px;
+  }
+
   .work-list,
   .worksGrid,
   .workGrid,
