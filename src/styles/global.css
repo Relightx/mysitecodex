@@ -254,31 +254,39 @@ h1 {
   color: #0b0b0b;
 }
 
-.logo-strip {
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-
-.logo-track {
-  width: max-content;
-  min-width: 100%;
+.clientLogos {
   display: flex;
-  gap: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin: 80px 0 60px;
+  flex-wrap: wrap;
 }
 
-.logo-pill {
-  flex: 0 0 9.5rem;
-  height: 2.3rem;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-align: center;
-  color: var(--muted);
+.clientLogos * {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.clientLogos img {
+  height: 24px;
+  width: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.clientLogos img:hover {
+  opacity: 1;
+}
+
+.clientLogos span {
+  font-size: 12px;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.01);
+  opacity: 0.6;
 }
 
 .section-head {
@@ -460,13 +468,9 @@ h2 {
     padding-inline: 1rem;
   }
 
-  .logo-track {
-    gap: 0.85rem;
-  }
-
-  .logo-pill {
-    flex-basis: 10.5rem;
-    height: 2.5rem;
+  .clientLogos {
+    gap: 42px;
+    margin: 64px 0 52px;
   }
 
   .work-list {

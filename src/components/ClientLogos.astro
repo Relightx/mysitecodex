@@ -1,11 +1,20 @@
 ---
-const logos = ['CLIENT 01', 'CLIENT 02', 'CLIENT 03', 'CLIENT 04', 'CLIENT 05', 'CLIENT 06'];
+const logos = [
+  { name: 'CLIENT 01', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+01' },
+  { name: 'CLIENT 02', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+02' },
+  { name: 'CLIENT 03', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+03' },
+  { name: 'CLIENT 04', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+04' },
+  { name: 'CLIENT 05', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+05' },
+  { name: 'CLIENT 06', src: 'https://placehold.co/180x24/00000000/e8f2f1?text=CLIENT+06' },
+];
 ---
 
-<section class="logo-strip" aria-label="Client logos">
-  <div class="logo-track">
-    {logos.concat(logos).map((logo, index) => (
-      <div class="logo-pill" aria-label={logo} aria-hidden={index >= logos.length ? 'true' : undefined}>{logo}</div>
-    ))}
-  </div>
+<section class="clientLogos" aria-label="Client logos">
+  {logos.map((logo) =>
+    logo.src ? (
+      <img src={logo.src} alt={logo.name} loading="lazy" />
+    ) : (
+      <span>{logo.name}</span>
+    ),
+  )}
 </section>
