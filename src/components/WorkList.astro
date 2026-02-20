@@ -25,11 +25,11 @@ const getThumbnail = (item: WorkItem): string => {
     {workItems.map((item, index) => (
       <li class="work-item">
         <a href={item.link} target="_blank" rel="noreferrer" class="work-link" aria-label={`${item.title} (opens in a new tab)`}>
-          <img src={getThumbnail(item)} alt={`${item.title} thumbnail`} loading="lazy" />
+          <img class="work-thumb" src={getThumbnail(item)} alt={`${item.title} thumbnail`} loading="lazy" />
           <div class="work-overlay"></div>
           <div class="work-meta">
-            <span>{String(index + 1).padStart(2, '0')}</span>
-            <h3>{item.title}</h3>
+            <span class="work-index">{String(index + 1).padStart(2, '0')}</span>
+            <h3 class="work-title">{item.title}</h3>
           </div>
         </a>
       </li>
