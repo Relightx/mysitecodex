@@ -1,18 +1,32 @@
 ---
-import { workItems } from '../data/work';
+import { workItems, type WorkItem } from '../data/work';
+
+const getThumbnail = (item: WorkItem): string => {
+  if (item.youtubeId) {
+    return `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg`;
+  }
+
+  if (item.thumbnail) {
+    return item.thumbnail;
+  }
+
+  const fallbackText = encodeURIComponent(item.title);
+  return `https://placehold.co/1280x720/161616/f0f0f0?text=${fallbackText}`;
+};
 ---
 
 <section id="work" class="section work-section" aria-labelledby="work-title">
   <div class="section-head">
     <p class="kicker">Selected projects</p>
-    <h2 id="work-title">WORK</h2>
+    <h2 id="work-title" class="work-heading">WORK</h2>
   </div>
 
   <ul class="work-list">
     {workItems.map((item, index) => (
       <li class="work-item">
         <a href={item.link} target="_blank" rel="noreferrer" class="work-link" aria-label={`${item.title} (opens in a new tab)`}>
-          <img src={item.thumbnail} alt={`${item.title} thumbnail`} loading="lazy" />
+          <img src={getThumbnail(item)} alt={`${item.title} thumbnail`} loading="lazy" />
+          <div class="work-overlay"></div>
           <div class="work-meta">
             <span>{String(index + 1).padStart(2, '0')}</span>
             <h3>{item.title}</h3>
